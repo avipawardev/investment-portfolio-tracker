@@ -1,42 +1,225 @@
-#root {
-  max-width: 1280px;
+@import "tailwindcss";
+
+body{
+  height: 100%;
+  width: 100%;
+  background-color: #0b0021;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.dashboard-container {
+  padding: 20px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.portfolio-summary {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.add-asset-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dashboard-tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.dashboard-tabs button {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.dashboard-tabs button.active {
+  border-bottom: 2px solid #4CAF50;
+}
+
+.asset-list {
+  margin-top: 30px;
+}
+
+.assets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.asset-card {
+  background-color: #1a0036;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.asset-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.asset-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.asset-actions button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.asset-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.asset-form {
+  background-color: #1a0036;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #333;
+  background-color: #0b0021;
+  color: white;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.profile-container {
+  padding: 20px;
+}
+
+.profile-content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.profile-image {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.profile-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile-info h3 {
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.profile-info input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #333;
+  background-color: #0b0021;
+  color: white;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
-.card {
-  padding: 2em;
+.upload-label {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+.upload-label:hover {
+  background-color: #45a049;
+}
+
+.profile-input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #333;
+  background-color: #0b0021;
+  color: white;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.profile-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.profile-actions button:first-child {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.profile-actions button:first-child:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.profile-actions button:last-child {
+  background-color: #f44336;
+  color: white;
 }
