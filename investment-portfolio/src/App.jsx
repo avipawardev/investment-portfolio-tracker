@@ -8,6 +8,8 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import './App.css';
 import About from "./components/About";
+import StocksList from "./components/StocksList";
+import CryptoList from "./components/CryptoList";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
+          <Route path="/stocks" element={<StocksList/>} />
+          <Route path="/crypto" element={<CryptoList />} />
           <Route
             path="/dashboard"
             element={

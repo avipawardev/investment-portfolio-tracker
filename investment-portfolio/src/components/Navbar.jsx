@@ -21,8 +21,10 @@ const Navbar = () => {
         <img className="w-32" src={EvolveLogo} alt="Logo" />
       </div>
 
-      <div className="hidden md:flex items-center justify-center gap-8">
+      <div className="hidden md:flex items-center justify-center gap-6">
         <Link to="/" className="text-gray-300 hover:text-white transition duration-300">Home</Link>
+        <Link to="/stocks" className="text-gray-300 hover:text-white transition duration-300">Stocks</Link>
+        <Link to="/crypto" className="text-gray-300 hover:text-white transition duration-300">Crypto</Link>
         <Link to="/dashboard" className="text-gray-300 hover:text-white transition duration-300">Dashboard</Link>
         <Link to="/about" className="text-gray-300 hover:text-white transition duration-300">About</Link>
       </div>
