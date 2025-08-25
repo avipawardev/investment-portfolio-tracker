@@ -9,11 +9,20 @@ const Navbar = () => {
   const { currentUser } = useAuth();
   const navigate = useNavigate();
   const [showProfileMenu, setShowProfileMenu] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const handleLogout = async () => {
     await signOut(auth);
     navigate("/login");
   };
+
+  const navLinks = [
+    { path: "/", label: "Home" },
+    { path: "/stocks", label: "Stocks" },
+    { path: "/crypto", label: "Crypto" },
+    { path: "/dashboard", label: "Dashboard" },
+    { path: "/about", label: "About" }
+  ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-90 backdrop-blur-sm py-4 px-6 flex items-center justify-between">
@@ -21,14 +30,32 @@ const Navbar = () => {
         <img className="w-32" src={EvolveLogo} alt="Logo" />
       </div>
 
-      <div className="hidden md:flex items-center justify-center gap-6">
-        <Link to="/" className="text-gray-300 hover:text-white transition duration-300">Home</Link>
-        <Link to="/stocks" className="text-gray-300 hover:text-white transition duration-300">Stocks</Link>
-        <Link to="/crypto" className="text-gray-300 hover:text-white transition duration-300">Crypto</Link>
-        <Link to="/dashboard" className="text-gray-300 hover:text-white transition duration-300">Dashboard</Link>
-        <Link to="/about" className="text-gray-300 hover:text-white transition duration-300">About</Link>
+      {/* Desktop Menu */}
+      <div className="hidden md:flex items-center gap-6 border-2 p-4 rounded-full bg-[#1a0532]">
+        {navLinks.map(link => (
+          <Link key={link.path} to={link.path} className="text-gray-300 hover:text-white transition">
+            {link.label}
+          </Link>
+        ))}
       </div>
 
+      {/* Mobile Menu */}
+      {showMobileMenu && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-gray-900 p-4">
+          {navLinks.map(link => (
+            <Link 
+              key={link.path} 
+              to={link.path} 
+              className="block py-2 text-gray-300 hover:text-white transition"
+              onClick={() => setShowMobileMenu(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      )}
+
+      {/* User Auth Section */}
       <div className="flex items-center gap-4">
         {currentUser ? (
           <div className="relative">
@@ -56,11 +83,20 @@ const Navbar = () => {
         ) : (
           <Link 
             to="/login" 
-            className="bg-green-500 px-6 py-2 rounded-full text-white hover:bg-green-600 transition duration-300"
+            className="bg-[#3ffe8c] px-6 py-2 rounded-full text-white hover:bg-green-600 transition"
           >
             Sign In
           </Link>
         )}
+        {/* Mobile Hamburger */}
+      <button 
+        className="md:hidden text-white"
+        onClick={() => setShowMobileMenu(!showMobileMenu)}
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
       </div>
     </nav>
   );

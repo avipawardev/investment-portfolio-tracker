@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-
-
-@import "tailwindcss";
+*{
+  font-family: Gilroy-Heavy;
+}
 
 body{
   height: 100%;

@@ -103,7 +103,7 @@ const About = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Trusted by users,<br />
-              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Awarded by Experts.</span>
+              <span className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Awarded by Experts.</span>
             </h2>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
               Evolve was recognized as the Best Portfolio Tracker of 2024 for its powerful insights, 

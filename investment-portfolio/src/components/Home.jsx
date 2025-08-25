@@ -60,8 +60,9 @@ const Home = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight font-[Gilroy-Heavy]">
-                YOUR<br />FINANCIAL<br />
+              <h1 className="text-5xl text-center md:text-8xl font-bold mt-6 text-white mb-6 leading-tight font-[Gilroy-Heavy]">
+               <div className="flex"> YOUR <img className="h-12 md:h-22" src="https://cdn.prod.website-files.com/649412cd35852fa073a7748d/67cae6242659927c18df1e32_Group%20545.svg" alt="" /> </div>
+                <div className="flex items-center"> <img className="h-12 md:h-22" src="https://cdn.prod.website-files.com/649412cd35852fa073a7748d/67cae624cb62f97d4f054faa_Group.svg" alt="" />FINANCIAL</div>
                 SUPERPOWER
               </h1>
               
@@ -166,9 +167,9 @@ const Home = () => {
 
       {/* Features Section */}
       <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-full p-8 rounded-4xl mx-auto bg-blue-600">
           <motion.h2 
-            className="text-4xl font-bold text-white text-center mb-16"
+            className="text-5xl md:text-8xl font-bold text-white text-center mb-16 font-[Gilroy-Heavy]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -312,7 +313,7 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            Explore Market Data
+            Explore <span className="text-[#3ffe8c]">Market</span>Data 📉
           </motion.h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
@@ -323,7 +324,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-semibold text-white mb-4">Stocks</h3>
+              <h3 className="text-2xl font-semibold text-white mb-4">Stocks 📈 </h3>
               <StocksList onAddToPortfolio={addToPortfolio} />
             </motion.div>
             
@@ -334,7 +335,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-semibold text-white mb-4">Cryptocurrencies</h3>
+              <h3 className="text-2xl font-semibold text-white mb-4">Cryptocurrencies 📊 </h3>
               <CryptoList onAddToPortfolio={addToPortfolio} />
             </motion.div>
           </div>

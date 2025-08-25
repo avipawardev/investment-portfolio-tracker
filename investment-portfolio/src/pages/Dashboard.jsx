@@ -66,7 +66,7 @@ function Dashboard() {
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl font-bold text-white mb-6">Dashboard</h1>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 mt-32 gap-6 mb-8">
           <div className="bg-gray-800 p-6 rounded-lg">
             <h2 className="text-xl font-semibold text-white mb-4">Portfolio Summary</h2>
             <p className="text-2xl text-blue-400">Total Value: ${totalValue.toFixed(2)}</p>
