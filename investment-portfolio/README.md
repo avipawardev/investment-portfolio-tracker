@@ -1,5 +1,5 @@
 # 💼 Investment Portfolio Tracker
-
+Deployed Link - 'https://investment-portfolio-tracker-tan.vercel.app/'
 
 A sleek and responsive web application built with **React.js** that helps users track and manage their investments in **stocks, cryptocurrencies, and other assets**.  
 It provides real-time portfolio insights, asset performance analytics, and an interactive dashboard with beautiful charts and graphs.  
@@ -31,10 +31,8 @@ It provides real-time portfolio insights, asset performance analytics, and an in
 ## 🛠️ Tech Stack
 - **Frontend**: React.js, React Router, Tailwind CSS, Framer Motion  
 - **Charts & Graphs**: Recharts  
-- **APIs**:  
-  - [CoinGecko API](https://www.coingecko.com/en/api) (Crypto Prices)  
-  - [Alpha Vantage](https://www.alphavantage.co/) (Stocks & Forex)  
-  - [Yahoo Finance API](https://www.yahoofinanceapi.com/)  
+- **APIs**:   
+  - [Alpha Vantage]Alpha Vantage Support 
 
 - **Data Storage**:  
   - LocalStorage (for MVP – no backend required)  
